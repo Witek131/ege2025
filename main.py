@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from itertools import *
+l=0
+k=0
+for i in product(sorted('ФАВОРИТ'), repeat=6):
+    print(i)
+    s =''.join(i)
+    l+=1
+    print(s)
+    if s.count('Р') == 2 and l%2 == 0 and s[0]!= "О":
+        k+=1
+print(k)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+a = input()
